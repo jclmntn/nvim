@@ -1,10 +1,9 @@
 require("jclmntn.set")
 require("jclmntn.remap")
-
+require("jclmntn.lazy")
 
 local augroup = vim.api.nvim_create_augroup
 local jclmntngroup = augroup('jclmntn', {})
-
 local autocmd = vim.api.nvim_create_autocmd
 
 --AutoCommands
