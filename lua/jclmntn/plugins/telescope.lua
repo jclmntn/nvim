@@ -1,9 +1,14 @@
 return {
     {
         "nvim-telescope/telescope.nvim",
-        dependencies = {"nvim-lua/plenary.nvim"},
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope-bibtex.nvim"
+        },
         config = function()
-            require("telescope").setup()
+            local telescope = require("telescope")
+            telescope.load_extension("bibtex")
+            telescope.setup()
             builtin = require('telescope.builtin')
         end,
         keys = {
