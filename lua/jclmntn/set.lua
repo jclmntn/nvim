@@ -11,3 +11,4 @@ vim.opt.smartindent = true
 vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
+vim.api.nvim_create_autocmd({"BufReadPre"}, {pattern = "*.md", command = "setlocal tw=100"})
