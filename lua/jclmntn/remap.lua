@@ -10,3 +10,10 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("v", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>P", "\"+P")
+
+
+-- To get out from terminal
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', {desc = 'Exit terminal mode'})
+
+-- To open up Ipython in a new window
+vim.keymap.set('n', '<leader>cp', ':vsplit term://python<cr> <C-W>L', {desc = '[c]ode repl [p]ython'})
